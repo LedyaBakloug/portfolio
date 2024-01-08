@@ -1,30 +1,47 @@
-<header class="text-black  body-font">
+<header class="body-font text-black">
   <div
-    class="container mx-auto flex flex-wrap p-0 flex-col md:flex-row items-center"
+    class="container mx-auto flex flex-col flex-wrap items-center p-0 md:flex-row"
   >
-    <a class="flex title-font font-medium items-center text-white mb-4 md:mb-0">
-        <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-white">
-          <img class="w-36 h-36 rouned transition duration-500 ease-in-out  
-          transform  
-          hover:-translate-y-1 hover:scale-110  
-          rounded-lg p-2" src="../../../assets/images/PP.png" alt="large avatar">  
-          </a>
+    <a class="title-font mb-4 flex items-center font-medium text-white md:mb-0">
+      <a routerLink="/" class="mr-5 hover:text-white">
+        <img
+          class="rouned h-36 w-36 transform rounded-lg p-2 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110"
+          src="../../../assets/images/PP.png"
+          alt="large avatar"
+        />
+      </a>
     </a>
 
     <nav
-      class="md:ml-auto flex flex-wrap items-center text-base justify-center"
+      class="flex flex-wrap items-center justify-center text-base md:ml-auto"
     >
-      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-green-800 ">Home</a>
-      <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-blue transition duration-500 ease-in-out  
-      bg-slate-100 hover:bg-slate-500
-       hover:scale-110  
-      rounded-lg p-2 border will-change-transform">Contact</a>
-      <a routerLink="/education" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-green-700transition duration-500 ease-in-out  
-                       bg-slate-100 hover:bg-slate-500
-                        hover:scale-110  
-                       rounded-lg p-2 border will-change-transform">Education</a>
-      <a routerLink="/skills" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-white">Skills</a>
-      <a routerLink="/work-history" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" ariaCurrentWhenActive="page" class="mr-5 hover:text-white"
+      <a
+        routerLink="/"
+        class="bg-primary mr-3 inline-block rounded-full border border-slate-300 bg-slate-100 p-2 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
+        >Home</a
+      >
+
+      <a
+        routerLink="/contact"
+        class="mr-3 rounded-full border border-slate-300 bg-slate-100 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
+        >Contact</a
+      >
+
+      <a
+        routerLink="/education"
+        class="bg-primary mr-3 inline-block rounded-full border border-slate-300 bg-slate-100 p-2 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
+        >Education</a
+      >
+
+      <a
+        routerLink="/skills"
+        class="bg-primary mr-3 inline-block rounded-full border border-slate-300 bg-slate-100 p-2 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
+        >Skills</a
+      >
+
+      <a
+        routerLink="/work-history"
+        class="bg-primary mr-4 inline-block rounded-full border border-slate-300 bg-slate-100 p-2 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
         >Work History</a
       >
     </nav>
