@@ -13,37 +13,17 @@
     </a>
 
     <nav
-      class="flex flex-wrap items-center justify-center text-base md:ml-auto"
+      class="flex flex-wrap items-center justify-center text-base font-medium uppercase md:ml-auto"
     >
-      <a
-        routerLink="/"
-        class="bg-primary mr-3 inline-block rounded-full border border-slate-300 bg-slate-100 p-2 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
-        >Home</a
-      >
-
-      <a
-        routerLink="/contact"
-        class="mr-3 rounded-full border border-slate-300 bg-slate-100 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
-        >Contact</a
-      >
-
-      <a
-        routerLink="/education"
-        class="bg-primary mr-3 inline-block rounded-full border border-slate-300 bg-slate-100 p-2 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
-        >Education</a
-      >
-
-      <a
-        routerLink="/skills"
-        class="bg-primary mr-3 inline-block rounded-full border border-slate-300 bg-slate-100 p-2 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
-        >Skills</a
-      >
-
-      <a
-        routerLink="/work-history"
-        class="bg-primary mr-4 inline-block rounded-full border border-slate-300 bg-slate-100 p-2 px-6 pb-2 pt-2.5 text-sm font-medium uppercase leading-normal text-slate-800 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-green-600"
-        >Work History</a
-      >
+      @for (item of items; track $index) {
+        <a
+          routerLink="{{ item.route }}"
+          routerLinkActive="border-b-[#D32F2F] border-b-2 border-solid scale-110"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="mr-8 transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:text-black"
+          >{{ item.name }}</a
+        >
+      }
     </nav>
   </div>
 </header>

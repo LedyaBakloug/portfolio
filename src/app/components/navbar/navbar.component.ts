@@ -8,6 +8,18 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
-export class NavbarComponent {
 
+export class NavbarComponent {
+  items: NavLinkDetails[] = [
+    {name: "Home", route: "/home"},
+    {name: "Contact", route: "/contact"},
+    {name: "Education", route: "/education"},
+    {name: "Skills", route: "/skills"},
+    {name: "Work History", route: "/work-history"}
+  ]
+}
+
+interface NavLinkDetails {
+  name: string,
+  route: string
 }
