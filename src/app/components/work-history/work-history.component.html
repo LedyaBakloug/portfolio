@@ -1,0 +1,56 @@
+<section class="body-font text-black text-lg italic">
+  <div class="container mx-auto px-5 py-5 ">
+    <div
+      class="mx-auto mb-10 flex flex-col items-center border-b border-gray-800 pb-10 sm:flex-row lg:w-3/5"
+    >
+      <div class="mb-0 text-center">
+        <h1 class="title-font mb-4 text-2xl font-medium sm:text-3xl transition duration-500 ease-in-out will-change-transform hover:scale-110">
+          Background
+        </h1>
+      </div>
+    </div>
+
+    @for (item of items; track $index){
+    <div
+      class="mx-auto mb-10 flex flex-col items-center border-b border-gray-800 pb-10 sm:flex-row lg:w-3/5"
+    >
+      <div
+        class="inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-gray-800  sm:mr-10 sm:h-32 sm:w-32 shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-emerald-900"
+      >
+        <svg
+          class="h-8 w-8 text-red-500"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            attr.d={{item.path}}
+          />
+        </svg>
+      </div>
+      <div>
+        
+      </div>
+      <div class="mt-2 flex-grow text-center sm:text-left">
+        <div class="ml-8 sm:text-2xl font-medium transition duration-500 ease-in-out will-change-transform hover:scale-110">
+          <h2 class=" mb-2 ">{{item.name}}</h2>
+          <p class="text-base leading-relaxed">{{item.date}}</p>
+          <p class="text-base leading-relaxed">{{item.company}}</p>
+          <p class="text-base leading-relaxed">{{item.location}}</p>
+          <br />
+        </div>
+        <div class="ml-8 transition duration-500 ease-in-out will-change-transform hover:scale-110">
+          <ul class="mb-2 list-disc">
+            @for (desc of item.description; track $index){
+            <li>{{desc}}</li>
+            }
+          </ul>
+        </div>
+      </div>
+    </div>
+  }
+  </div>
+</section>

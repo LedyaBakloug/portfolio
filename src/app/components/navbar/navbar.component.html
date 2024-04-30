@@ -1,0 +1,29 @@
+<header class="body-font text-black ">
+  <div
+    class="container mx-auto flex flex-col flex-wrap items-center p-0 md:flex-row"
+  >
+    <a class="title-font mb-4 flex items-center font-medium text-white md:mb-0">
+      <a routerLink="/" class="mr-5 hover:text-white">
+        <img
+          class="rouned h-36 w-36 transform rounded-lg p-2 transition duration-500 ease-in-out hover:-translate-y-1 hover:scale-110"
+          src="../../../assets/images/PP.png"
+          alt="large avatar"
+        />
+      </a>
+    </a>
+
+    <nav
+      class="flex flex-wrap items-center justify-center text-base font-medium uppercase md:ml-auto"
+    >
+      @for (item of items; track $index) {
+        <a
+          routerLink="{{ item.route }}"
+          routerLinkActive="border-b-[#D32F2F] border-b-2 border-solid scale-110"
+          [routerLinkActiveOptions]="{ exact: true }"
+          class="mr-8 transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:text-black"
+          >{{ item.name }}</a
+        >
+      }
+    </nav>
+  </div>
+</header>

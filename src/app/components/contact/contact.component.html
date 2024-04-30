@@ -1,0 +1,57 @@
+<section class="body-font 400 font-sans italic">
+  <div class="container mx-auto px-5 py-20">
+    <div
+      class="mx-40 mb-20 text-center transition duration-500 ease-in-out will-change-transform hover:scale-110"
+    >
+      <h1 class="title-font mb-4 text-2xl font-medium text-black sm:text-3xl">
+        Stay Connected
+      </h1>
+      <div class="mt-6 flex justify-center">
+        <div class="inline-flex h-1 w-16 rounded-full bg-red-700"></div>
+      </div>
+    </div>
+    <div
+      class="-mx-4 -mb-10 -mt-4 flex flex-wrap space-y-6 sm:-m-4 md:space-y-0"
+    >
+      @for (item of items; track $index) {
+        <div class="flex flex-col items-center p-4 text-center md:w-1/3">
+          <a
+            href="{{ item.href }}"
+            class=""
+            class="mb-5 inline-flex h-20 w-20 flex-shrink-0 items-center justify-center rounded-full bg-gray-800  shadow-[0_4px_9px_-4px_#3b71ca] transition duration-500 ease-in-out will-change-transform hover:scale-110 hover:bg-emerald-900 focus:outline-none sm:mr-10 sm:h-32 sm:w-32"
+          >
+            <svg
+              class="h-8 w-8 text-red-500"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              xmlns="mailto:contact&#64;lydiayoussef.com"
+            >
+              <path attr.d="{{ item.path }}" />
+
+              @if (item.polyline) {
+                <polyline attr.points="{{ item.polyline }}" />
+              } @else if (item.rect) {
+                <rect
+                  attr.x="{{ item.rect.x }}"
+                  attr.y="{{ item.rect.y }}"
+                  attr.width="{{ item.rect.width }}"
+                  attr.height="{{ item.rect.height }}"
+                />
+              } @else if (item.circle) {
+                <circle
+                  attr.cx="{{ item.circle.cx }}"
+                  attr.cy="{{ item.circle.cy }}"
+                  attr.r="{{ item.circle.r }}"
+                />
+              }
+            </svg>
+          </a>
+        </div>
+      }
+    </div>
+  </div>
+</section>
